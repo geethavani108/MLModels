@@ -1,0 +1,52 @@
+
+# skewed distributions
+for col in df.columns:
+    print(col)
+    print({df[col].skew()})
+    
+categorical_col = []
+for column in df.columns:
+    if df[column].dtype == object and len(df[column].unique()) <= 50:
+        categorical_col.append(column)
+        print(f"{column} : {df[column].unique()}")
+        print("====================================")
+        
+    
+ # Visulazing the distibution of the data for every feature
+df.hist(edgecolor='black', linewidth=1.2, figsize=(20, 20));   
+    #from pandas_profiling import ProfileReport
+    
+ # Transform categorical data into dummies
+# categorical_col.remove("Attrition")
+# data = pd.get_dummies(df, columns=categorical_col)
+# data.info()
+
+
+
+from sklearn.preprocessing import LabelEncoder
+
+label = LabelEncoder()
+for column in categorical_col:
+    df[column] = label.fit_transform(df[column])   
+    
+    # Transform categorical data into dummies
+# categorical_col.remove("Attrition")
+# data = pd.get_dummies(df, columns=categorical_col)
+# data.info()
+
+
+Codigo	Polaridade	VCE(V)	Ic(A)	Potencia(W)	hfe
+0	BC107	NPN	45	0,1	0,3	                    110-450
+1	BC108	NPN	20	0,1	0,3	                    110-800
+2	BC109	NPN	20	0,1	0,3	                    200-800
+3	BC177	PNP	45	0,1	0,3	                    75-260
+4	BC178	PNP	25	0,1	0,3	                    125-500
+
+
+di  = df["hfe"].str.split("-") 
+df["hfe_min"] = di.str.get(0) 
+df["hfe_max"] = di.str.get(1) 
+
+df["hfe_max"] = df["hfe_max"].str.replace(">","") 
+
+df = tabela.drop(["hfe"], axis=1) 
