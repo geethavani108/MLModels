@@ -1,3 +1,7 @@
+#pip install pandas_visual-analysis 
+from pandas_visual_analysis import VisualAnalysis
+VisualAnalysis(df)
+
 #pip install pandas_profiling 
 from pandas_profiling import ProfileReport
 ### To Create the Simple report quickly
