@@ -1,6 +1,5 @@
-#pip install pandas_visual-analysis 
-from pandas_visual_analysis import VisualAnalysis
-VisualAnalysis(df)
+
+
 
 #pip install pandas_profiling 
 from pandas_profiling import ProfileReport
@@ -8,6 +7,36 @@ from pandas_profiling import ProfileReport
 df=pd.read_csv("filename")
 profile = ProfileReport(df, title='Pandas Profiling Report', explorative=True)
 profile.to_widgets()
+
+categorical_col = []
+for column in df.columns:
+    if df[column].dtype == object and len(df[column].unique()) <= 50:
+        categorical_col.append(column)
+        print(f"{column} : {df[column].unique()}")
+        print("====================================")
+        
+
+df.drop('Name', axis =1, inplace=True)
+df.drop('Cabin',axis =1, inplace=True)
+df.drop('PassengerId', axis =1, inplace=True)
+df.drop('Ticket',axis =1, inplace=True)
+
+#one hot encoding
+dummies = pd.get_dummies(df[['Female']], drop_first=True)
+df = pd.concat([df.drop(['Gender'],axis=1), dummies],axis=1)
+
+dummies1 = pd.get_dummies(df[['Embarked']], drop_first=True)
+df = pd.concat([df.drop(['Embarked'],axis=1), dummies1],axis=1)
+
+
+#  check if the output feature(y) is imbalenced dataset
+pd.value_counts(df['Survived'])
+
+
+#pip install pandas_visual-analysis 
+from pandas_visual_analysis import VisualAnalysis
+VisualAnalysis(df)
+
 
 Handling categorical values
 ---------------------------
@@ -44,13 +73,7 @@ for col in df.columns:
     print(col)
     print({df[col].skew()})
     
-categorical_col = []
-for column in df.columns:
-    if df[column].dtype == object and len(df[column].unique()) <= 50:
-        categorical_col.append(column)
-        print(f"{column} : {df[column].unique()}")
-        print("====================================")
-        
+
     
  # Visulazing the distibution of the data for every feature
 df.hist(edgecolor='black', linewidth=1.2, figsize=(20, 20));   
