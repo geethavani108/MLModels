@@ -118,3 +118,19 @@ df["hfe_max"] = di.str.get(1)
 df["hfe_max"] = df["hfe_max"].str.replace(">","") 
 
 df = tabela.drop(["hfe"], axis=1) 
+
+
+# let's see how data is distributed for every column
+plt.figure(figsize=(20,25), facecolor='white')
+plotnumber = 1
+
+for column in data:
+    if plotnumber<=16 :
+        ax = plt.subplot(4,4,plotnumber)
+        sns.distplot(data[column])
+        plt.xlabel(column,fontsize=20)
+        plt.ylabel('Salary',fontsize=20)
+    plotnumber+=1
+plt.tight_layout()
+
+#################
