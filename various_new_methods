@@ -1,4 +1,14 @@
-
+https://pypi.org/project/autoimpute
+https://readthedocs.org/projects/autoimpute/downloads/pdf/latest/
+from sklearn.preprocessing import LabelEncoder
+from autoimpute.imputations import SingleImputer, MultipleImputer
+from autoimpute.imputations import MulitnomialLogisticImputer
+#start the imputing the missing values. we will use autoimputer
+impute=SingleImputer(strategy='categorial')
+#here in this mushroom  features are all categorical
+impute.fit(data)
+new_data=impute.transform(data)
+new_data
 
 
 #pip install pandas_profiling 
