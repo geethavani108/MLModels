@@ -4,6 +4,8 @@ y=new_data['Class']
 rdsample=RandomOverSampler()
 x_sampled, y_sampled=rdsample.fit_sample(x,y)
 
+
+KNNimputer()
 https://pypi.org/project/autoimpute
 https://readthedocs.org/projects/autoimpute/downloads/pdf/latest/
 from sklearn.preprocessing import LabelEncoder
