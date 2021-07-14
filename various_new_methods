@@ -1,3 +1,51 @@
+# check the details of data
+df.shape
+df.dtypes
+df.isnull().sum()
+df.columns
+
+#drop the columns not required in one shot
+df.drop(columns=['RowNumber', 'CustomerId', 'Surname'], axis =1,inplace=True)
+
+
+#show all categorical columns
+for column in df.columns:
+    if df[column].dtype == object and len(df[column].unique()) <= 50:
+        categorical_col.append(column)
+        print(f"{column} : {df[column].unique()}")
+        print("====================================")
+#one hot encoding
+dummies = pd.get_dummies(df[['Gender','Geography']], drop_first=True)
+df=pd.concat([df.drop(['Gender','Geography'],axis=1), dummies],axis=1)
+
+
+# Rounding to 2 decimals for float and converting to int
+df['Balance']=df['Balance'].round(0).astype(int)
+df['EstimatedSalary']=df['EstimatedSalary'].round(0).astype(int)
+
+
+#  check if the output feature(y) is imbalanced dataset
+pd.value_counts(df['Survived'])
+
+pip install pandas_profiling (in console)
+from pandas_profiling import ProfileReport
+### To Create the Simple report quickly
+df=pd.read_csv("filename")
+profile = ProfileReport(df, title='Pandas Profiling Report', explorative=True)
+profile.to_widgets()
+
+# drop a row if missing values are less percentage
+df.dropna(subset=['Fare'],how='any',inplace=True)
+
+#how to fill missing values column mean
+df['Age'].fillna((df['Age'].mean()), inplace=True)
+
+#pip install pandas_visual-analysis 
+from pandas_visual_analysis import VisualAnalysis
+VisualAnalysis(df)
+
+
+
 https://github.com/iNeuronai/interview-question-data-science-/blob/master/Final%20Data%20Science%20Interview%20Questions(%23Day30).pdf
 # if heavily imbalanced data in the dependent variable y in thyroid detection
 x= new_data.drop(['class'],axis=1)
@@ -6,8 +54,7 @@ rdsample=RandomOverSampler()
 x_sampled, y_sampled=rdsample.fit_sample(x,y)
 
 
-#df['Balance']=df['Balance'].round(0).astype(int)
-df['EstimatedSalary']=df['EstimatedSalary'].round(0).astype(int)
+
 
 KNNimputer()
 https://pypi.org/project/autoimpute
@@ -23,46 +70,10 @@ new_data=impute.transform(data)
 new_data
 
 
-#pip install pandas_profiling 
-from pandas_profiling import ProfileReport
-### To Create the Simple report quickly
-df=pd.read_csv("filename")
-profile = ProfileReport(df, title='Pandas Profiling Report', explorative=True)
-profile.to_widgets()
-
-categorical_col = []
-for column in df.columns:
-    if df[column].dtype == object and len(df[column].unique()) <= 50:
-        categorical_col.append(column)
-        print(f"{column} : {df[column].unique()}")
-        print("====================================")
-        
-
-df.drop('Name', axis =1, inplace=True)
-df.drop('Cabin',axis =1, inplace=True)
-df.drop('PassengerId', axis =1, inplace=True)
-df.drop('Ticket',axis =1, inplace=True)
-
-#one hot encoding
-dummies = pd.get_dummies(df[['Female']], drop_first=True)
-df = pd.concat([df.drop(['Gender'],axis=1), dummies],axis=1)
-
-dummies1 = pd.get_dummies(df[['Embarked']], drop_first=True)
-df = pd.concat([df.drop(['Embarked'],axis=1), dummies1],axis=1)
 
 
-#  check if the output feature(y) is imbalenced dataset
-pd.value_counts(df['Survived'])
 
-# drop a row if missing values are less percentage
-df.dropna(subset=['Fare'],how='any',inplace=True)
 
-#how to fill missing values column mean
-df['Age'].fillna((df['Age'].mean()), inplace=True)
-
-#pip install pandas_visual-analysis 
-from pandas_visual_analysis import VisualAnalysis
-VisualAnalysis(df)
 
 
 Handling categorical values
