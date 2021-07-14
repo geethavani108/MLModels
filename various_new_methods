@@ -6,6 +6,9 @@ rdsample=RandomOverSampler()
 x_sampled, y_sampled=rdsample.fit_sample(x,y)
 
 
+#df['Balance']=df['Balance'].round(0)
+df['EstimatedSalary']=df['EstimatedSalary'].round(0)
+
 KNNimputer()
 https://pypi.org/project/autoimpute
 https://readthedocs.org/projects/autoimpute/downloads/pdf/latest/
