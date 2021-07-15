@@ -167,3 +167,14 @@ for column in data:
 plt.tight_layout()
 
 #################
+ https://www.oracle.com/in/a/ocom/docs/data-science-lifecycle-ebook.pdf
+df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data',
+                 names=column_names, sep=',\s*', na_values='?')
+test_df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test',
+                      names=column_names, sep=',\s*', na_values='?', skiprows=1)
+https://github.com/darenr/public_datasets/raw/master/churn_dataset.csv
+https://docs.oracle.com/en-us/iaas/tools/ads-sdk/latest/user_guide/automl/automl.html#keras
+fraud detection and churn prediction
+
+
+
