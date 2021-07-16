@@ -177,4 +177,15 @@ https://docs.oracle.com/en-us/iaas/tools/ads-sdk/latest/user_guide/automl/automl
 fraud detection and churn prediction
 
 
+#implement pie chart
+labels = 'Exited', 'Retained'
+sizes = [df.Exited[df['Exited']==1].count(), df.Exited[df['Exited']==0].count()]
+explode = (0, 0.1)
+fig1, ax1 = plt.subplots(figsize=(10, 8))
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')
+plt.title("Proportion of customer churned and retained", size = 20)
+plt.show()
+
 
