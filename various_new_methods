@@ -188,4 +188,14 @@ ax1.axis('equal')
 plt.title("Proportion of customer churned and retained", size = 20)
 plt.show()
 
+#Univariate Analysis
+IRIS dataset
+sepal length Vs  species(setosa,verginica,versica) individaually
+
+#bi variate Analysis
+sns.FacetGrid(df,hue="species",size=5).map(plt.scatter,"petallength","petalwideth").add_legend()
+plt.show()
+
+#Multivariate Analysis
+sns.pairplot(df,huew="species",size=3)
 
