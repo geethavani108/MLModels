@@ -200,6 +200,7 @@ plt.show()
 sns.pairplot(df,huew="species",size=3)
 -----------------------
 Feature Importance
+(select KBest alsocalled as information gain)
 -----------------------
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
