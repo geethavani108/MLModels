@@ -198,4 +198,65 @@ plt.show()
 
 #Multivariate Analysis
 sns.pairplot(df,huew="species",size=3)
+-----------------------
+Feature Importance
+-----------------------
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+### Apply SelectKBest Algorithm
+ordered_rank_features=SelectKBest(score_func=chi2,k=20)
+ordered_feature=ordered_rank_features.fit(X,y)
 
+dfscores=pd.DataFrame(ordered_feature.scores_,columns=["Score"])
+dfcolumns=pd.DataFrame(X.columns)
+features_rank=pd.concat([dfcolumns,dfscores],axis=1)
+features_rank.columns=['Features','Score']
+features_rank
+:
+features_rank.nlargest(10,'Score')
+
+2nd Method
+--------
+from sklearn.ensemble import ExtraTreesClassifier
+import matplotlib.pyplot as plt
+model=ExtraTreesClassifier()
+model.fit(X,y)
+ExtraTreesClassifier()
+print(model.feature_importances_)
+ranked_features=pd.Series(model.feature_importances_,index=X.columns)
+ranked_features.nlargest(10).plot(kind='barh')
+plt.show()
+
+3rd Method correlation
+----------------------
+df.corr()
+
+import seaborn as sns
+corr=df.iloc[:,:-1].corr()
+top_features=corr.index
+plt.figure(figsize=(20,20))
+sns.heatmap(df[top_features].corr(),annot=True)
+
+
+#### Remove The correlated
+threshold=0.8
+# find and remove correlated features
+def correlation(dataset, threshold):
+    col_corr = set()  # Set of all the names of correlated columns
+    corr_matrix = dataset.corr()
+    for i in range(len(corr_matrix.columns)):
+        for j in range(i):
+            if abs(corr_matrix.iloc[i, j]) > threshold: # we are interested in absolute coeff value
+                colname = corr_matrix.columns[i]  # getting the name of column
+                col_corr.add(colname)
+    return col_corr
+
+correlation(df.iloc[:,:-1],threshold)
+set()
+
+Information Gain¶
+from sklearn.feature_selection import mutual_info_classif
+mutual_info=mutual_info_classif(X,y)
+mutual_data=pd.Series(mutual_info,index=X.columns)
+mutual_data.sort_values(ascending=False)
+Correlation
