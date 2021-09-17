@@ -228,6 +228,16 @@ ranked_features=pd.Series(model.feature_importances_,index=X.columns)
 ranked_features.nlargest(10).plot(kind='barh')
 plt.show()
 
+-------------------------------------
+from sklearn.ensemble import ExtraTreesRegressor
+import matplotlib.pyplot as plt
+model=ExtraTreesRegressor()
+model.fit(X,y)
+ExtraTreesRegressor(random_state=101)
+print(model.feature_importances_)
+pd.Series(model.feature_importances_, index = X.columns).nlargest(5).plot(kind = 'barh')
+plt.show()
+
 3rd Method correlation
 ----------------------
 df.corr()
