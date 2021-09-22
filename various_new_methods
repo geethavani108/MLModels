@@ -7,6 +7,9 @@ df.columns
 #drop the columns not required in one shot
 df.drop(columns=['RowNumber', 'CustomerId', 'Surname'], axis =1,inplace=True)
 
+import missingno as msno
+msno.bar(data)
+plt.show()
 
 #show all categorical columns
 for column in df.columns:
