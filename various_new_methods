@@ -30,6 +30,12 @@ df['EstimatedSalary']=df['EstimatedSalary'].round(0).astype(int)
 #  check if the output feature(y) is imbalanced dataset
 pd.value_counts(df['Survived'])
 
+Pandas apply value_counts on multiple columns at once
+The below example show how to apply Pandas method value_counts on multiple columns of a Dataframe ot once by using pandas.DataFrame.apply. 
+This solution is working well for small to medium sized DataFrames. The syntax is simple - the first one is for the whole DataFrame:
+
+df.apply(pd.Series.value_counts).head()
+
 pip install pandas_profiling (in console)
 from pandas_profiling import ProfileReport
 ### To Create the Simple report quickly
