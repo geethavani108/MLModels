@@ -1,3 +1,7 @@
+Learn sales data analysis
+https://github.com/KeithGalli/Pandas-Data-Science-Tasks/blob/master/SalesAnalysis/SalesAnalysis.ipynb
+https://www.youtube.com/watch?v=eMOA1pPVUc4
+
 # check the details of data
 df.shape
 df.dtypes
