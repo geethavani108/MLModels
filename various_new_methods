@@ -1,7 +1,9 @@
 Learn sales data analysis
 https://github.com/KeithGalli/Pandas-Data-Science-Tasks/blob/master/SalesAnalysis/SalesAnalysis.ipynb
 https://www.youtube.com/watch?v=eMOA1pPVUc4
-
+df1=df.groupby(['Country','CustomerID'])['Quantity].max()
+df1 = df.set_index(['Country','CustomerID','InvoiceNo','Quantity','UnitPrice']).sort_index()
+-------------------------------------------------------------------------
 # check the details of data
 df.shape
 df.dtypes
