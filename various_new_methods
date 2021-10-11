@@ -8,7 +8,7 @@ gnb = GaussianNB()
 gnb.fit(X_train, y_train)
 y_pred = gnb.predict(X_test)
 
-
+df.groupby(['Country'])['Sales'].plot.bar()
 df1=df.groupby(['Country','CustomerID'])['Quantity].max()
 df1 = df.set_index(['Country','CustomerID','InvoiceNo','Quantity','UnitPrice']).sort_index()
 -------------------------------------------------------------------------
