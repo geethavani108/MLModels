@@ -1,5 +1,7 @@
 
-
+############## check null values
+df[df['Age'].isna()]
+df['Age'].replace('32','None',inplace=True)
 # train a Gaussian Naive Bayes classifier on the training set
 from sklearn.naive_bayes import GaussianNB
 # instantiate the model
