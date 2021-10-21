@@ -1,4 +1,39 @@
 
+#pending
+-----------
+statistics testign for a X features
+https://www.youtube.com/watch?v=Ren6frLTCKU
+-------------------------------------
+https://github.com/123deepak/Machine-Learning/blob/master/Hierarical%20and%20TSNE%20Clustering%20over%20Grain%20data%20set%20and%20Visualizations.ipynb
+Hierchial clustering
+
+pd.crosstab(df['SFH'], df['Result'])
+----------------------
+y=df['Result']
+X=df.drop(columns=['Result'], axis =1)
+for col in X.columns:
+    temp = pd.DataFrame()
+    index = 0
+    for val in df[col].unique():
+        denominator = df[df[col] == val].shape[0]
+        numerator = df[(df[col] == val) & (df['Result'] == 1)].shape[0]
+        perc = numerator * 100 / denominator
+        temp.loc[index, 'val'] = val
+        temp.loc[index, 'perc'] = perc
+        index = index + 1
+    temp.sort_values(['val'], inplace = True)
+    plt.figure()
+    plt.plot(temp['val'], temp['perc'])
+    plt.title("Distribution for {}".format(col))
+    plt.xticks(df[col].unique())
+    plt.legend(['% of 1 falling in each category'])
+    plt.show()
+    
+    
+    X = data.iloc[:, 0:-2]
+y = data.iloc[:,-1]
+
+#################################
 ############## check null values
 df[df['Age'].isna()]
 df['Age'].replace('32','None',inplace=True)
