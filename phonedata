@@ -1,0 +1,51 @@
+,customer_age,customer_country,phone_model,repair_type,repair_center,repair_cost,repair_status,parts_used,repair_duration_days,turnaround_time_days,customer_segment,cost_per_part,repair_month,previous_repairs
+0,49,Bouvet Island (Bouvetoya),Model D,Motherboard Replacement,Center D,257.84337859642744,Completed,4,2,2,Middle-aged,64.46084464910686,4,0
+1,65,Oman,Model A,Charging Port Repair,Center A,199.74462704430263,Cancelled,1,19,19,Senior,199.74462704430263,7,0
+2,60,Uganda,Model A,Speaker Replacement,Center B,78.73324926489171,Cancelled,4,11,11,Senior,19.683312316222928,1,0
+3,54,United States Minor Outlying Islands,Model D,Button Repair,Center A,73.46432120583904,Pending,1,13,13,Senior,73.46432120583904,3,0
+4,21,Iceland,Model B,Screen Replacement,Center D,277.40670485914814,In Progress,1,10,10,Young,277.40670485914814,3,0
+5,47,British Virgin Islands,Model B,Microphone Repair,Center A,217.3000657345196,Completed,2,14,14,Middle-aged,108.6500328672598,11,0
+6,23,Croatia,Model C,Camera Repair,Center D,257.3216998291889,Pending,3,18,18,Young,85.77389994306297,11,0
+7,63,Taiwan,Model D,Water Damage Repair,Center D,269.7447250705668,Pending,4,19,19,Senior,67.4361812676417,5,0
+8,36,Tajikistan,Model D,Motherboard Replacement,Center A,192.94308801208052,Pending,2,9,9,Middle-aged,96.47154400604026,3,0
+9,49,Mozambique,Model B,Speaker Replacement,Center B,179.36158793876032,Cancelled,1,7,7,Middle-aged,179.36158793876032,9,0
+10,26,New Caledonia,Model B,Motherboard Replacement,Center C,157.60685258024756,In Progress,4,3,3,Middle-aged,39.40171314506189,1,0
+11,29,Indonesia,Model D,Camera Repair,Center A,129.23664694777983,In Progress,1,6,6,Middle-aged,129.23664694777983,8,0
+12,28,Oman,Model A,Vibration Motor Repair,Center C,158.64899021467795,Completed,3,2,2,Middle-aged,52.882996738225984,2,0
+13,63,Lao People's Democratic Republic,Model D,Vibration Motor Repair,Center A,243.4699139325391,In Progress,2,6,6,Senior,121.73495696626955,10,0
+14,33,Puerto Rico,Model D,Water Damage Repair,Center C,200.48085775378289,In Progress,3,3,3,Middle-aged,66.8269525845943,4,0
+15,18,American Samoa,Model B,Fingerprint Sensor Repair,Center B,273.1308224887115,Pending,2,16,16,Young,136.56541124435574,7,0
+16,62,Hungary,Model B,Proximity Sensor Repair,Center B,160.84500359479694,Pending,1,8,8,Senior,160.84500359479694,6,0
+17,38,Mongolia,Model A,Charging Port Repair,Center A,201.7723946796885,Cancelled,3,2,2,Middle-aged,67.2574648932295,2,0
+18,47,Jersey,Model A,Button Repair,Center D,207.8268882729972,Pending,3,17,17,Middle-aged,69.2756294243324,6,0
+19,30,Timor-Leste,Model C,Camera Repair,Center C,197.92429057658137,Pending,1,9,9,Middle-aged,197.92429057658137,4,0
+20,51,Equatorial Guinea,Model D,Display Replacement,Center D,225.65844327137907,Pending,3,12,12,Senior,75.2194810904597,7,0
+21,21,Kuwait,Model B,Motherboard Replacement,Center D,109.35836709370156,Pending,4,3,3,Young,27.33959177342539,1,0
+22,45,Cuba,Model A,Earpiece Replacement,Center D,178.09094438644766,Cancelled,2,11,11,Middle-aged,89.04547219322383,5,0
+23,55,American Samoa,Model C,Screen Replacement,Center B,76.05620070208693,Pending,2,1,1,Senior,38.02810035104346,1,0
+24,48,Macao,Model C,Speaker Replacement,Center A,146.12783191120317,Completed,2,13,13,Middle-aged,73.06391595560159,7,0
+25,44,Dominica,Model B,Battery Replacement,Center A,171.9167671553161,Completed,4,15,15,Middle-aged,42.97919178882903,3,0
+26,22,Algeria,Model B,Vibration Motor Repair,Center B,213.0560648863681,Completed,2,5,5,Young,106.52803244318405,10,0
+27,42,United States Virgin Islands,Model C,Speaker Replacement,Center B,287.6327631465509,Completed,1,17,17,Middle-aged,287.6327631465509,2,0
+28,20,Mexico,Model A,Vibration Motor Repair,Center A,200.16276663708896,Pending,3,6,6,Young,66.72092221236299,7,0
+29,50,Gambia,Model C,Water Damage Repair,Center D,235.89847904413995,Completed,4,11,11,Middle-aged,58.97461976103499,8,0
+30,21,Netherlands,Model D,Microphone Repair,Center C,176.56651487380068,Pending,2,18,18,Young,88.28325743690034,2,0
+31,42,Bouvet Island (Bouvetoya),Model D,Camera Repair,Center C,208.52600784408284,Cancelled,1,4,4,Middle-aged,208.52600784408284,2,0
+32,37,Morocco,Model B,Vibration Motor Repair,Center C,67.73305403344335,Completed,3,3,3,Middle-aged,22.57768467781445,8,0
+33,51,Sierra Leone,Model A,Proximity Sensor Repair,Center D,113.59789521046174,In Progress,3,13,13,Senior,37.86596507015391,9,0
+34,43,Netherlands,Model A,Microphone Repair,Center A,140.4632733012847,Completed,4,9,9,Middle-aged,35.11581832532117,4,0
+35,22,Fiji,Model D,Vibration Motor Repair,Center B,168.1233387516284,Completed,4,6,6,Young,42.0308346879071,5,0
+36,52,Greece,Model C,Speaker Replacement,Center A,61.41218637559594,Pending,4,12,12,Senior,15.353046593898984,9,0
+37,45,France,Model B,Headphone Jack Repair,Center D,85.00602438832942,Completed,1,2,2,Middle-aged,85.00602438832942,1,0
+38,46,Sudan,Model C,Vibration Motor Repair,Center B,119.20357694782643,In Progress,1,3,3,Middle-aged,119.20357694782643,1,0
+39,26,Norfolk Island,Model C,Camera Repair,Center D,292.8831727252626,Pending,4,3,3,Middle-aged,73.22079318131566,10,0
+40,69,South Georgia and the South Sandwich Islands,Model C,Antenna Replacement,Center C,132.8367517757627,Pending,2,12,12,Senior,66.41837588788135,6,0
+41,55,Nicaragua,Model A,Button Repair,Center C,170.51026452802063,Cancelled,3,15,15,Senior,56.83675484267354,3,0
+42,67,Fiji,Model D,Display Replacement,Center D,99.02442818459824,Cancelled,3,9,9,Senior,33.00814272819941,4,0
+43,23,Sierra Leone,Model A,Charging Port Repair,Center B,202.69501776894205,Completed,1,8,8,Young,202.69501776894205,4,0
+44,36,Turkey,Model D,Vibration Motor Repair,Center B,120.17080387899358,Cancelled,3,11,11,Middle-aged,40.05693462633119,7,0
+45,61,Mozambique,Model B,Button Repair,Center A,101.7481446096067,Cancelled,2,16,16,Senior,50.87407230480335,7,0
+46,28,Timor-Leste,Model B,Motherboard Replacement,Center C,179.14315711149476,Cancelled,3,4,4,Middle-aged,59.71438570383159,7,0
+47,19,Turks and Caicos Islands,Model C,Vibration Motor Repair,Center A,51.376449790105205,Pending,1,1,1,Young,51.376449790105205,7,0
+48,64,Bahrain,Model D,Speaker Replacement,Center A,51.91600816230633,Pending,1,7,7,Senior,51.91600816230633,7,0
+49,61,Qatar,Model D,Water Damage Repair,Center D,104.76720227546444,Pending,2,2,2,Senior,52.38360113773222,4,0
