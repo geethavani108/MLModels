@@ -4,6 +4,7 @@ cd path/to/your/repository
  git remote add origin https://github.com/geethavani108/Healthsciencebot.git
  git remote -v                                    #incase any previous repos exists display   git remote remove  RepairSample
  git branch -M main
+ git add .
  git commit -m  "Initial commit"
   git push -u origin main
 #create a repository in github gui with name Healthsciencebot
