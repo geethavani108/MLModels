@@ -1,9 +1,11 @@
 #gitcommands
 cd path/to/your/repository
-git init
-git remote add origin https://github.com/yourusername/yourrepository.git
-git remote -v
-git add .
-git commit -m "Initial commit"
-git push -u origin main
+ git init
+ git remote add origin https://github.com/geethavani108/Healthsciencebot.git
+ git remote -v
+ git branch -M main
+ git commit -m  "Initial commit"
+  git push -u origin main
+#create a repository in github gui with name Healthsciencebot
+ git push -u origin main
 
