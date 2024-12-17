@@ -10,3 +10,8 @@ cd path/to/your/repository
 #create a repository in github gui with name Healthsciencebot
  git push -u origin main
 
+
+netstat -ano | findstr :5000
+taskkill /PID <PID> /F
+mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns
+
